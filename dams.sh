@@ -55,9 +55,9 @@ if [[ "${user}" == "root" ]]; then
     bye
 fi
 
-secret="$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c64)"
+secret="$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c128)"
 
-echo "Dams. This is the secret: ${secret}" | mail -s “Dams” systems@scribenet.com
+echo -e "Dams \n Request from user ${user} \n Time $(date) \n Secret: ${secret}" | mail -s “Dams” systems@scribenet.com
 
 prompt "What is the secret?"
 secret_from_user="${input}"
