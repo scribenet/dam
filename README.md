@@ -1,5 +1,4 @@
-# DAM
-## Deadswitch Access-decision Manager
+# Deadswitch Access-decision Manager
 
 Dam is a bash login shell used to securly allow password login to an otherwise key-based-authentication only linux server. It is intended to be used for the sole purpose of allowing rightful systems administrators access in an emergency situation where they do not have access to a machine whos public key was setup with their account, and thereforce must revert back to password-based login.
 
